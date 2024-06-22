@@ -1,63 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+:root {
+  --color-white: #fff;
+  --color-off-white: #f8f8f8;
+  --color-black: #0e1324;
+  --color-dark-gray: #333;
+  --color-medium-gray: #eceaea;
+  --color-light-gray: #efeded;
+  --color-blue: rgb(54, 111, 255);
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-
-.container{
-    width: 100%;
-    height: 100vh;
-    background: #e3f9ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.calculator{
-    background: #3a4452;
-    padding: 20px;
-    border-radius: 10px;
-}
-.calculator form input{
-    border: 0;
-    outline: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
-    background: transparent;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-form .display{
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-off-white);
 }
-form .display input{
-    text-align: right;
-    flex: 1;
-    font-size: 45px;
-    box-shadow: none;
-}
-form input.equal{
-    width: 145px;
-}
-
-
-
-form input.operator{
-    color: #33ffd8;
+.calculator {
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-medium-gray);
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
+.calculator form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  color: var(--color-black);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 4px;
+}
 
+form .display input {
+  padding: 10px;
+  letter-spacing: 1px;
+}
 
+form .display {
+  display: flex;
+  margin: 10px 0;
+  justify-content: flex-end;
+}
+form .display input {
+  flex: 1;
+  text-align: right;
+  font-size: 45px;
+  box-shadow: none;
+}
+form input.equal {
+  width: 133px;
+}
 
-
-
-
-
+form input.operator {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-weight: bold;
+}
