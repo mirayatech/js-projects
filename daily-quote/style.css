@@ -32,7 +32,7 @@ body {
   box-shadow: 0 0 5px var(--box-shadow-color);
 }
 .quote-box h2 {
-  font-size: 32px;
+  font-size: calc(30 / 16 * 1rem);
   margin-bottom: 40px;
   position: relative;
 }
@@ -48,8 +48,9 @@ body {
   transform: translateX(-50%);
 }
 .quote-box blockquote {
-  font-size: 26px;
+  font-size: calc(20 / 16 * 1rem);
   min-height: 110px;
+  color: var(--color-dark-gray);
 }
 .quote-box blockquote::before,
 .quote-box blockquote::after {
@@ -60,6 +61,7 @@ body {
   margin-top: 10px;
   float: right;
   position: relative;
+  color: var(--color-dark-gray);
 }
 .quote-box span::before {
   content: "";

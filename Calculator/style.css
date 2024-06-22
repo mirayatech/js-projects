@@ -2,10 +2,7 @@
   --color-white: #fff;
   --color-off-white: #f8f8f8;
   --color-black: #0e1324;
-  --color-dark-gray: #333;
   --color-medium-gray: #eceaea;
-  --color-light-gray: #efeded;
-  --color-blue: rgb(54, 111, 255);
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -40,14 +37,16 @@
   border-radius: 5px;
   color: var(--color-black);
   font-size: 1rem;
-  font-weight: bold;
   cursor: pointer;
   margin: 4px;
+  background-color: transparent;
+  border: 1px solid var(--color-medium-gray);
 }
 
 form .display input {
   padding: 10px;
   letter-spacing: 1px;
+  border: none;
 }
 
 form .display {
@@ -58,7 +57,7 @@ form .display {
 form .display input {
   flex: 1;
   text-align: right;
-  font-size: 45px;
+  font-size: calc(45 / 16 * 1rem);
   box-shadow: none;
 }
 form input.equal {
@@ -66,7 +65,7 @@ form input.equal {
 }
 
 form input.operator {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  font-weight: bold;
+  background: var(--color-medium-gray);
+  border: 1px solid var(--color-medium-gray);
+  color: var(--color-black);
 }

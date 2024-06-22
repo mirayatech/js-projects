@@ -1,53 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins', sans-serif;
-    box-sizing: border-box;
+:root {
+  --color-white: #fff;
+  --color-off-white: #f8f8f8;
+  --color-medium-gray: #eceaea;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
-.container{
-    height: 100vh;
-    width: 100%;
-    background: #201f21;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-off-white);
 }
 
-.input-box{
-    width: 400px;
-    max-width: 90%;
-    position: relative;
+.input-box {
+  width: 400px;
+  max-width: 90%;
+  position: relative;
 }
-.input-box input{
-    width: 100%;
-    height: 60px;
-    padding: 0 20px;
-    border: 1px solid #ccc;
-    outline: none;
-    color: #fff;
-    background: transparent;
+.input-box input {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border: 1px solid var(--color-medium-gray);
+  outline: none;
+  background: transparent;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 30px var(--box-shadow-color);
 }
-button{
-    background: transparent;
-    border: 0;
-    outline: none;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 15px;
+button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
 }
-button img{
-    width: 35px;
+button img {
+  width: 35px;
 }
-#message{
-    position: absolute;
-    bottom: -30px;
-    color: #fff;
-    font-size: 15px;
-    display: none;
+#message {
+  position: absolute;
+  bottom: -30px;
+  color: var(--color-white);
+  font-size: 1rem;
+  display: none;
 }
-::placeholder{
-    font-size: 15px;
+::placeholder {
+  font-size: 1rem;
 }

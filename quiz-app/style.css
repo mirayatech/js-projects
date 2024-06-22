@@ -1,0 +1,94 @@
+:root {
+  --color-white: #fff;
+  --color-off-white: #f8f8f8;
+  --color-black: #0e1324;
+  --color-medium-gray: #eceaea;
+  --box-shadow-color: rgba(0, 0, 0, 0.15);
+  --color-green: #c8f9dd;
+  --color-red: #ffaeae;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-off-white);
+}
+.app {
+  background: var(--color-white);
+  box-shadow: 0 0 30px 0 var(--box-shadow-color);
+  border: 1px solid var(--color-medium-gray);
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+.app h1 {
+  font-size: calc(20 / 16 * 1rem);
+  color: var(--color-black);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-medium-gray);
+  padding-bottom: 10px;
+}
+.quiz {
+  padding: 20px 0;
+}
+.quiz h2 {
+  color: var(--color-black);
+  padding-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.btn {
+  background: var(--color-white);
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid var(--color-black);
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover:not([disabled]) {
+  background: #222;
+  color: var(--color-white);
+}
+.btn:disabled {
+  cursor: no-drop;
+}
+#next-btn {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+.correct {
+  background-color: var(--color-green);
+}
+.incorrect {
+  background: var(--color-red);
+}
+
+.watch-link {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: var(--color-white);
+  text-decoration: none;
+}

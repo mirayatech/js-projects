@@ -1,0 +1,109 @@
+:root {
+  --background-gradient-start: #0c0c0c;
+  --background-gradient-end: #252629;
+  --primary-text-color: #fff;
+  --clock-background: rgba(234, 199, 237, 0.11);
+  --container-before-bg: #ffee6f;
+  --container-after-bg: #7e83ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    45deg,
+    var(--background-gradient-start),
+    var(--background-gradient-end)
+  );
+  color: var(--primary-text-color);
+  position: relative;
+  box-shadow: 0 0 30px var(--box-shadow-color);
+}
+
+.container {
+  width: 800px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  width: 100%;
+  height: 100%;
+  background: var(--clock-background);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(40px);
+}
+
+.container::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background: var(--container-before-bg);
+  border-radius: 5px;
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  z-index: -1;
+}
+
+.container::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background: var(--container-after-bg);
+  border-radius: 50%;
+  position: absolute;
+  right: -30px;
+  bottom: -50px;
+  z-index: -1;
+}
+
+.clock span {
+  font-size: calc(80 / 16 * 1rem);
+  width: 110px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.clock span::after {
+  font-size: 1rem;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hrs::after {
+  content: "HOURS";
+}
+
+#min::after {
+  content: "MINS";
+}
+
+#sec::after {
+  content: "SEC";
+}
+
+.watch-link {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  font-size: calc(12 / 16 * 1rem);
+  text-decoration: none;
+  color: var(--primary-text-color);
+}

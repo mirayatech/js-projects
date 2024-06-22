@@ -1,0 +1,98 @@
+:root {
+  --color-white: #fff;
+  --color-off-white: #f8f8f8;
+  --color-black: #0e1324;
+  --color-dark-gray: #333;
+  --color-medium-gray: #eceaea;
+  --color-light-gray: #efeded;
+  --color-blue: rgb(71, 71, 240);
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-off-white);
+}
+.calculator {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.calculator h1 {
+  line-height: 1;
+  font-weight: bold;
+  color: var(--color-black);
+  text-align: center;
+  font-size: calc(40 / 16 * 1rem);
+}
+
+.input-box {
+  display: flex;
+  padding: 35px;
+  margin: 40px 0;
+  border-radius: 10px;
+  align-items: center;
+  border: 1px solid var(--color-medium-gray);
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px var(--box-shadow-color);
+}
+.input-box input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 13px 20px;
+  border: 0;
+  outline: 0;
+  font-size: calc(18 / 16 * 1rem);
+  border-radius: 6px;
+  position: relative;
+  background-color: var(--color-off-white);
+  border: 1px solid var(--color-light-gray);
+}
+.input-box button {
+  border: 0;
+  outline: 0;
+  padding: 16px 30px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+
+  background-color: var(--color-black);
+}
+.input-box input::-webkit-calendar-picker-indicator {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  background-position: calc(100% - 10px);
+  background-size: 30px;
+  cursor: pointer;
+}
+#result {
+  font-size: calc(20 / 16 * 1rem);
+}
+#result span {
+  color: var(--color-blue);
+}
+.watch-link {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  font-size: calc(12 / 16 * 1rem);
+  text-decoration: none;
+  color: var(--color-black);
+}
